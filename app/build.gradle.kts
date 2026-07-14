@@ -25,7 +25,7 @@ val posthogApiKey: String = ""
 val posthogHost: String = ""
 
 val metaAppId: String = ""
-val productSku: String = ""
+val productSku: String = "com.gamenative"
 
 room {
     schemaDirectory("$projectDir/schemas")
