@@ -21,11 +21,11 @@ val keystoreProperties: Properties? = if (keystorePropertiesFile.exists()) {
 } else null
 
 // Add PostHog API key and host as build-time variables
-val posthogApiKey: String = project.findProperty("POSTHOG_API_KEY") as String? ?: System.getenv("POSTHOG_API_KEY") ?: ""
-val posthogHost: String = project.findProperty("POSTHOG_HOST") as String? ?: System.getenv("POSTHOG_HOST") ?: "https://us.i.posthog.com"
+val posthogApiKey: String = ""
+val posthogHost: String = ""
 
-val metaAppId: String = project.findProperty("META_APP_ID") as String? ?: System.getenv("META_APP_ID") ?: ""
-val productSku: String = project.findProperty("PRODUCT_SKU") as String? ?: System.getenv("PRODUCT_SKU") ?: ""
+val metaAppId: String = ""
+val productSku: String = ""
 
 room {
     schemaDirectory("$projectDir/schemas")
