@@ -449,13 +449,13 @@
     <string name="button_y">Yボタン</string>
     <string name="button_y_subtitle">天面ボタン</string>
     <string name="shoulder_buttons">肩ボタン</string>
-    <string name="button_l1">L1/LB</string>
+    <string name="button_l1">LB</string>
     <string name="button_l1_subtitle">左バンパー</string>
-    <string name="button_r1">R1/RB</string>
+    <string name="button_r1">RB</string>
     <string name="button_r1_subtitle">右バンパー</string>
-    <string name="button_l2">L2/LT</string>
+    <string name="button_l2">LT</string>
     <string name="button_l2_subtitle">左トリガー</string>
-    <string name="button_r2">R2/RT</string>
+    <string name="button_r2">RT</string>
     <string name="button_r2_subtitle">右トリガー</string>
     <string name="menu_buttons">メニューボタン</string>
     <string name="button_start">スタート/オプション</string>
@@ -749,6 +749,8 @@
     <string name="enable_xinput_api">XInput API を有効にする</string>
     <string name="enable_directinput_api">DirectInput API を有効にする</string>
     <string name="directinput_mapper_type">DirectInput マッパーのタイプ</string>
+    <string name="show_controller_debug_menu">コントローラー デバッグ メニューを表示</string>
+    <string name="show_controller_debug_menu_subtitle">ゲーム内クイックメニューに P1-P4 コントローラー スロットのライブパネルを表示します</string>
     <string name="disable_mouse_input">マウス入力を無効にする</string>
     <string name="touchscreen_mode">タッチスクリーンモード</string>
     <string name="shooter_mode_toggle">シューターモード</string>
@@ -2035,4 +2037,10 @@
     <string name="featured_status_out_now_body">現在利用可能</string>
     <string name="tab_recommended">おすすめ</string>
     <string name="gog_rec_empty">ゲームを追加またはプレイすると、ライブラリに基づいたGOGのおすすめが表示されます。</string>
+    <string name="steam_collections_removed">保存されたコレクションが Steam で削除されたため、フィルターから除外されました。</string>
+    <string name="steam_collections_title">Steam コレクション</string>
+    <string name="steam_collections_loading">コレクションを読み込み中…</string>
+    <string name="steam_collections_offline">最後に同期されたコレクションを表示しています。更新するには接続してください。</string>
+    <string name="steam_collections_clear">クリア</string>
+    <string name="steam_collections_smart_unsupported">標準コレクションのみ表示されます。スマートコレクションはまだ対応していません。</string>
 </resources>

@@ -509,6 +509,12 @@ object PrefManager {
             setPref(LAUNCH_REAL_STEAM, value)
         }
 
+    private val SHOW_CONTROLLER_DEBUG_MENU = booleanPreferencesKey("show_controller_debug_menu")
+    var showControllerDebugMenu: Boolean
+        get() = getPref(SHOW_CONTROLLER_DEBUG_MENU, false)
+        set(value) {
+            setPref(SHOW_CONTROLLER_DEBUG_MENU, value)
+        }
     private val LAUNCH_BIONIC_STEAM = booleanPreferencesKey("launch_bionic_steam")
     var launchBionicSteam: Boolean
         get() = getPref(LAUNCH_BIONIC_STEAM, false)
@@ -867,6 +873,28 @@ object PrefManager {
         }
         set(value) {
             setPref(LIBRARY_SORT_KEY, value.key)
+        }
+
+    private val LIBRARY_STEAM_COLLECTIONS_CACHE = stringPreferencesKey("library_steam_collections_cache")
+    var librarySteamCollectionsCache: String
+        get() = getPref(LIBRARY_STEAM_COLLECTIONS_CACHE, "")
+        set(value) { setPref(LIBRARY_STEAM_COLLECTIONS_CACHE, value) }
+
+    private val LIBRARY_STEAM_COLLECTIONS_SKIPPED_DYNAMIC = booleanPreferencesKey("library_steam_collections_skipped_dynamic")
+    var librarySteamCollectionsSkippedDynamic: Boolean
+        get() = getPref(LIBRARY_STEAM_COLLECTIONS_SKIPPED_DYNAMIC, false)
+        set(value) { setPref(LIBRARY_STEAM_COLLECTIONS_SKIPPED_DYNAMIC, value) }
+
+    private val LIBRARY_STEAM_COLLECTIONS = stringPreferencesKey("library_steam_collections")
+    private const val COLLECTION_ID_SEPARATOR = "" // unit separator; cannot appear in a collection id
+    var librarySteamCollections: Set<String>
+        get() {
+            val raw = getPref(LIBRARY_STEAM_COLLECTIONS, "")
+            if (raw.isEmpty()) return emptySet()
+            return raw.split(COLLECTION_ID_SEPARATOR).filter { it.isNotEmpty() }.toSet()
+        }
+        set(value) {
+            setPref(LIBRARY_STEAM_COLLECTIONS, value.joinToString(COLLECTION_ID_SEPARATOR))
         }
 
     /**
